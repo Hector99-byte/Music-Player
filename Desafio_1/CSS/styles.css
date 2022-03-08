@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.container {
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr repeat(4, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "side header header header header"
+    "side  contenido contenido contenido contenido"
+    "side  content content content content"
+    "side  footer footer footer footer";
+}
+input {
+  font-size: 150%;
+}
+.header__menuMobile {
+  display: none;
+  height: 20px;
+  width: 20px;
+}
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+.know {
+  grid-area: know;
+}
+.contenido {
+  grid-area: contenido;
+  background-image: url("../assets/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+aside {
+  grid-area: side;
+  background-color: #2b2828;
+}
+main {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  /* display: flex;
+  justify-content: space-between; */
+  grid-row: 0.5fr;
+}
+footer {
+  grid-area: footer;
+}
+.list {
+  color: white;
+  height: 40%;
+  background-color: #2b2828;
+}
+.list__element {
+  background-color: #2b2828;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+.list__element:hover {
+  background-color: #9300ff;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  color: white;
+  width: 60%;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__list li {
+  font-weight: 700;
+}
+li a {
+  text-decoration: none;
+  color: white;
+}
+.card {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  color: white;
+  /* background-color: #2b2828; */
+  background: linear-gradient(45deg, red, blue, purple, black);
+  background-size: 400% 400%;
+  position: relative;
+  animation: fix 5s ease-in-out infinite;
+  transition: all 0.3s;
+}
+.card:hover {
+  transform: scale(1.1, 1.1);
+}
+@keyframes fix {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.card__image {
+  position: relative;
+  height: 212px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__name {
+  display: flex;
+  flex-direction: column;
+}
+.card__image p {
+  color: #121212;
+}
+.nav_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.nav_input input {
+  width: 40%;
+  background-color: #2b2828;
+  color: white;
+  height: 50%;
+  border: 1px solid black;
+}
+.contenido {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenido h1 {
+  font-size: 500%;
+  font-weight: 900;
+}
+@media (max-width: 894px) {
+  aside {
+    display: none;
+  }
+  header {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  .contenido {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  .container {
+    grid-template-areas:
+      "header header header header"
+      "contenido contenido contenido contenido"
+      "content content content content"
+      "footer footer footer footer";
+  }
+  .nav_input {
+    display: none;
+  }
+  .header__menuMobile {
+    display: inline;
+  }
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr;
+    grid-row-start: auto;
+    overflow: auto;
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  .card_image {
+    height: 40%;
+  }
+}
+@media (max-width: 608px) {
+  .nav__list {
+    width: 100%;
+  }
+}
+@media (max-width: 554px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr;
+  }
+}
+@media (max-width: 443px) {
+  .contenido h1 {
+    font-size: 100%;
+  }
+}
+@media (max-width: 380px) {
+  .card__image {
+    height: 100px;
+  }
+  li a {
+    text-decoration: none;
+    color: white;
+    font-size: 13;
+  }
+}

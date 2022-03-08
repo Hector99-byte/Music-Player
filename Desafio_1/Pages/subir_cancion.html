@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css" />
+    <title>Trendings</title>
+  </head>
+  <body>
+    <header>
+      <nav class="topBar">
+        <div class="topBar__container">
+          <img
+            src="../assets/Spotify.png"
+            alt="Logo Sportify"
+            class="topBar__img"
+          />
+
+          <div class="topBar__notifications">
+            <ul class="topBar__links">
+              <li style="color: white"><a href="../index.html">Inicio</a></li>
+              <li style="color: white">
+                <a href="mis_canciones.html">Mis Canciones</a>
+              </li>
+              <li style="color: white">
+                <a href="Trendings.html">Trendings</a>
+              </li>
+              <li style="color: white">
+                <a href="subir_cancion.html">Grabar</a>
+              </li>
+              <li style="color: white">
+                <a href="friends.html">Friends</a>
+              </li>
+            </ul>
+            <img
+              src="../assets/message.png"
+              alt="Message"
+              class="topBar__icons"
+            />
+            <img
+              src="../assets/notification.png"
+              alt="Message"
+              class="topBar__icons"
+            />
+            <img src="../assets/song.png" alt="Message" class="topBar__icons" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          natus dolorem voluptate iste quam quis enim distinctio quos sint,
+          alias tempore animi ipsam quia tempora dolores quae! Animi, at cumque.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa,
+          consequatur ipsa nemo consectetur, voluptates sed aspernatur rerum
+          sunt vitae sequi commodi voluptate ex accusantium eum aut voluptatum
+          blanditiis voluptas nulla?
+        </p>
+        <img
+          src="https://direct.rhapsody.com/imageserver/images/alb.395418308/600x600.jpg"
+          alt=""
+          style="width: 250px; height: 250px"
+        />
+        <form action="subir.js" class="form">
+          <input type="text" id="Nombre" />
+          <label for="Nombre">Escribe el nombre de tu cancion</label>
+
+          <input type="text" id="Genero" />
+          <label for="Genero">Escribe el genero de la cancion</label>
+
+          <input type="number" id="Año" />
+          <label for="Año">Escribe el año de la cancion</label>
+
+          <select name="Album" id="">
+            <option value="1">Album 1</option>
+            <option value="2">Album 2</option>
+            <option value="3">Album 3</option>
+          </select>
+
+          <p>Colocar la letra de la cancion</p>
+          <textarea
+            name="letra"
+            id="letra"
+            cols="30"
+            rows="10"
+            placeholder="Subir la letra"
+          ></textarea>
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name=""
+                id=""
+                value="checkedValue"
+                checked
+              />
+              Publica
+            </label>
+          </div>
+          <button type="submit">Crear cancion</button>
+          <button type="reset">Limpiar forma</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <h3>Logo escrito</h3>
+      <p>Todos los derechos reservados</p>
+      <h3>Redes sociales de contacto</h3>
+    </footer>
+  </body>
+</html>
